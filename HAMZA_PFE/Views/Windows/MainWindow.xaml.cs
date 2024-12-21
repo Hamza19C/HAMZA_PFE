@@ -9,6 +9,10 @@ namespace HAMZA_PFE.Views.Windows
     {
         public MainWindowViewModel ViewModel { get; }
 
+
+
+
+
         public MainWindow(
             MainWindowViewModel viewModel,
             IPageService pageService,
