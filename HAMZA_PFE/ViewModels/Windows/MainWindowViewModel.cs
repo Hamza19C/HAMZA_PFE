@@ -6,7 +6,7 @@ namespace HAMZA_PFE.ViewModels.Windows
     public partial class MainWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string _applicationTitle = "WPF UI - HAMZA_PFE";
+        private string _applicationTitle = "AI Security app (Hamza PFE)";
 
         [ObservableProperty]
         private ObservableCollection<object> _menuItems = new()
