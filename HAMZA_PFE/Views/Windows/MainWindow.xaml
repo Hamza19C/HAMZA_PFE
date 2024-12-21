@@ -33,6 +33,7 @@
                 <ui:ImageIcon Source="pack://application:,,,/Assets/cyber-security-icon.png" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
+        
 
         <ui:NavigationView
             x:Name="RootNavigation"
