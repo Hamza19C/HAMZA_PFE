@@ -21,7 +21,7 @@ namespace HAMZA_PFE.ViewModels.Windows
             {
                 Content = "Protection",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.ShieldTask28 },
-                TargetPageType = typeof(Views.Pages.DataPage)
+                TargetPageType = typeof(Views.Pages.Protection)
             },
             new NavigationViewItem()
             {
