@@ -52,6 +52,8 @@ namespace HAMZA_PFE
                 services.AddSingleton<DataViewModel>();
                 services.AddSingleton<SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
+                services.AddSingleton<Protection>();
+                services.AddSingleton<ProtectionViewModel>();
             }).Build();
 
         /// <summary>

@@ -9,9 +9,11 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Protection">
 
-    <Grid>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <ui:Card Content="Quick Scan" HorizontalAlignment="Left" Margin="83,38,0,0" VerticalAlignment="Top" Height="138" Width="112"/>
+        <ui:Card HorizontalAlignment="Left" Margin="83,38,0,0" Height="138" Width="112" VerticalAlignment="Top">
+            <ui:Button Content="Button" VerticalAlignment="Top"/>
+        </ui:Card>
         <ui:Card Content="Custom Scan" HorizontalAlignment="Left" Margin="576,38,0,0" VerticalAlignment="Top" Height="138" Width="112"/>
         <ui:Card Content="Full Scan" HorizontalAlignment="Left" Margin="318,38,0,0" VerticalAlignment="Top" Height="138" Width="112"/>
 
