@@ -15,6 +15,7 @@
         WindowStartupLocation="CenterOwner" 
         Height="139" Width="542"
         Focusable="True"
+        ExtendsContentIntoTitleBar="True"
         ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
         ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
         Foreground="{DynamicResource TextFillColorPrimaryBrush}"
@@ -28,7 +29,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Content="Quick Scan" Margin="0,0,247,92" FontWeight="Bold"/>
+        <Label Content="Quick Scan" Margin="0,0,261,92" FontWeight="Bold"/>
         <StackPanel Orientation="Horizontal" Margin="59,82,7,0" Height="40" VerticalAlignment="Top" Grid.Column="1">
             <Button x:Name="okButton" IsDefault="True" Content="Start"/>
             <Button x:Name="cancelButton" IsCancel="True" Content="Cancel" Width="64"/>

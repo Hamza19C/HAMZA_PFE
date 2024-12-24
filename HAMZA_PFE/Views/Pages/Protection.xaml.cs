@@ -8,6 +8,7 @@ namespace HAMZA_PFE.Views.Pages
     
     public partial class Protection : INavigableView<ProtectionViewModel>
     {
+
         public ProtectionViewModel ViewModel { get; }
 
         public Protection(ProtectionViewModel viewModel)
@@ -19,8 +20,10 @@ namespace HAMZA_PFE.Views.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window quick_scan = new QuickScanDialog();
-            quick_scan.Show();
+            QuickScanDialog quickScanDialog = new QuickScanDialog();
+            quickScanDialog.ShowDialog();
+
+
 
         }
     }
