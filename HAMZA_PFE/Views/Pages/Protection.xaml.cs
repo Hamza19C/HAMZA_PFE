@@ -1,6 +1,7 @@
 ﻿
 using HAMZA_PFE.ViewModels.Pages;
 using Wpf.Ui.Controls;
+using HAMZA_PFE.Dialogs;
 
 namespace HAMZA_PFE.Views.Pages
 {
@@ -16,5 +17,11 @@ namespace HAMZA_PFE.Views.Pages
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window quick_scan = new QuickScanDialog();
+            quick_scan.Show();
+
+        }
     }
 }

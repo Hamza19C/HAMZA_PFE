@@ -12,7 +12,7 @@
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="323" Width="780">
         <ui:Card HorizontalAlignment="Left" Margin="50,50,0,0" Height="114" Width="201" VerticalAlignment="Top">
             <StackPanel Width="176" Height="82">
-                <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click"/>
                 <TextBlock Text="Quick scan for your device." TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
             </StackPanel>
         </ui:Card>
