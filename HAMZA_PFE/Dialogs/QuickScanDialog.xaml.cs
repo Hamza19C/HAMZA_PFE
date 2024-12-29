@@ -23,6 +23,10 @@ namespace HAMZA_PFE.Dialogs
         public QuickScanDialog()
         {
             InitializeComponent();
+            FileEnScan.Content = ".....";
+            TimeEstimation.Content = ".....";
+            Progress.Value = 0;
+
         }
     }
 }
