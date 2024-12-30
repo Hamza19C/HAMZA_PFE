@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Wpf.Ui;
+using HAMZA_PFE.ViewModels;
+using HAMZA_PFE.Dialogs;
 
 namespace HAMZA_PFE
 {
@@ -45,6 +47,8 @@ namespace HAMZA_PFE
                 // Main window with navigation
                 services.AddSingleton<INavigationWindow, MainWindow>();
                 services.AddSingleton<MainWindowViewModel>();
+
+                services.AddSingleton<QuickScanDialog>();
 
                 services.AddSingleton<DashboardPage>();
                 services.AddSingleton<DashboardViewModel>();
