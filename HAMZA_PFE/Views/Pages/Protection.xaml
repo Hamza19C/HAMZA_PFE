@@ -11,8 +11,6 @@
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="780">
 
-        <TextBlock Text="Protects you from malicious software" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,-31,0,20"/>
-        <TextBlock Text="and other threats without slowing down your device." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Height="303" VerticalAlignment="Top"/>
         <ui:Card HorizontalAlignment="Left" Margin="50,50,0,0" Height="114" Width="201" VerticalAlignment="Top">
             <StackPanel Width="176" Height="82">
                 <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
