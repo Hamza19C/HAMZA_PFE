@@ -9,7 +9,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Protection">
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="323" Width="780">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="780">
+
+        <TextBlock Text="Protects you from malicious software" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,-31,0,20"/>
+        <TextBlock Text="and other threats without slowing down your device." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Height="303" VerticalAlignment="Top"/>
         <ui:Card HorizontalAlignment="Left" Margin="50,50,0,0" Height="114" Width="201" VerticalAlignment="Top">
             <StackPanel Width="176" Height="82">
                 <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
@@ -31,23 +34,23 @@
             </StackPanel>
         </ui:Card>
 
-        <ui:Card VerticalAlignment="Stretch" Margin="284,193,295,26" >
+        <ui:Card VerticalAlignment="Stretch" Margin="284,193,295,39" >
             <StackPanel Height="77" Margin="0,0,-1,0">
-                <TextBlock Text="HAMZA" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBlock Text="AI" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                 <ui:ToggleSwitch HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,0"/>
             </StackPanel>
         </ui:Card>
 
         <ui:Card  VerticalAlignment="Top" Margin="521,193,58,0" Height="104">
             <StackPanel Height="70">
-                <TextBlock Text="HAMZA " TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBlock Text="AI " TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                 <ui:ToggleSwitch HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,0"/>
             </StackPanel>
         </ui:Card>
 
         <ui:Card VerticalAlignment="Top" Margin="50,193,529,0" Height="104" >
             <StackPanel Height="77" Margin="0,0,3,0">
-                <TextBlock Text="HAMZA" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBlock Text="AI" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                 <ui:ToggleSwitch HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,0"/>
             </StackPanel>
         </ui:Card>
