@@ -1,0 +1,1094 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\HP ELITEBOOK 830 G8\\source\\repos\\HAMZA_PFE\\HAMZA_PFE\\dataset\\Malware dataset.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "hash",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "millisecond",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "classification",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "state",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "usage_counter",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "prio",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "static_prio",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "normal_prio",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "policy",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "vm_pgoff",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "vm_truncate_count",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "task_size",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "cached_hole_size",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "free_area_cache",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "mm_users",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "map_count",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "hiwater_rss",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "total_vm",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "shared_vm",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "exec_vm",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "reserved_vm",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "nr_ptes",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "end_data",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "last_interval",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "nvcsw",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "nivcsw",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "min_flt",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "maj_flt",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "fs_excl_counter",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "lock",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "utime",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "stime",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "gtime",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "cgtime",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "signal_nvcsw",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 1.759,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "OutputColumnNames": [
+              "hash"
+            ],
+            "InputColumnNames": [
+              "hash"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "InputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ]
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "hash",
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "classification",
+            "InputColumnName": "classification",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "classification",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 2.711,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "OutputColumnNames": [
+              "hash"
+            ],
+            "InputColumnNames": [
+              "hash"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "InputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ]
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "hash",
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "classification",
+            "InputColumnName": "classification",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 21,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 858,
+            "SubsampleFraction": 0.94892057964033494,
+            "MaximumBinCountPerFeature": 348,
+            "FeatureFraction": 0.98856339341692445,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "classification",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 1.41,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "OutputColumnNames": [
+              "hash"
+            ],
+            "InputColumnNames": [
+              "hash"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "InputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ]
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "hash",
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "classification",
+            "InputColumnName": "classification",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 40,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.778018182774433,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 185,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 5.759251609126037E-10,
+            "L2Regularization": 0.33794915303864054,
+            "LabelColumnName": "classification",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 1.477,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "OutputColumnNames": [
+              "hash"
+            ],
+            "InputColumnNames": [
+              "hash"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "InputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ]
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "hash",
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "classification",
+            "InputColumnName": "classification",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.94178489530729848,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 0.35504898862997863,
+            "MaximumBinCountPerFeature": 267,
+            "FeatureFraction": 0.98604336278436666,
+            "L1Regularization": 4.2095671281897976E-10,
+            "L2Regularization": 0.57870953020191085,
+            "LabelColumnName": "classification",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 2.612,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "OutputColumnNames": [
+              "hash"
+            ],
+            "InputColumnNames": [
+              "hash"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "InputColumnNames": [
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ]
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "hash",
+              "millisecond",
+              "state",
+              "usage_counter",
+              "prio",
+              "static_prio",
+              "normal_prio",
+              "policy",
+              "vm_pgoff",
+              "vm_truncate_count",
+              "task_size",
+              "cached_hole_size",
+              "free_area_cache",
+              "mm_users",
+              "map_count",
+              "hiwater_rss",
+              "total_vm",
+              "shared_vm",
+              "exec_vm",
+              "reserved_vm",
+              "nr_ptes",
+              "end_data",
+              "last_interval",
+              "nvcsw",
+              "nivcsw",
+              "min_flt",
+              "maj_flt",
+              "fs_excl_counter",
+              "lock",
+              "utime",
+              "stime",
+              "gtime",
+              "cgtime",
+              "signal_nvcsw"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "classification",
+            "InputColumnName": "classification",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 336,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 402,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 241,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "classification",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "Concatenate",
+      "e3": "MapValueToKey",
+      "e4": "FastTreeOva",
+      "e5": "FastForestOva",
+      "e6": "LightGbmMulti",
+      "e7": "LbfgsLogisticRegressionOva",
+      "e8": "LbfgsMaximumEntropyMulti",
+      "e9": "SdcaMaximumEntropyMulti",
+      "e10": "SdcaLogisticRegressionOva",
+      "e11": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * (e4 + e5 + e6 + e7 + e8 + e9 + e10) * e11",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Users\\HP ELITEBOOK 830 G8\\source\\repos\\HAMZA_PFE\\HAMZA_PFE\\IA models\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 800,
+    "LabelColumn": "classification",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}
