@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="3.0.1" />
     <PackageReference Include="Microsoft.ML.LightGbm" Version="3.0.1" />
     <PackageReference Include="WPF-UI" Version="3.0.4" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0 " />
@@ -30,8 +31,8 @@
     <Resource Include="Assets\wpfui-icon-1024.png" />
     <Content Include="cyber-security-icon.ico" />
   </ItemGroup>
-  <ItemGroup Label="MLModel1">
-    <None Include="MLModel1.mlnet">
+  <ItemGroup Label="MLModelPEHeader">
+    <None Include="MLModelPEHeader.mlnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

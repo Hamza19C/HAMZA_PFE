@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace HAMZA_PFE
 {
-    public partial class MLModel1
+    public partial class MLModelPEHeader
     {
         /// <summary>
         /// Permutation feature importance (PFI) is a technique to determine the importance 
