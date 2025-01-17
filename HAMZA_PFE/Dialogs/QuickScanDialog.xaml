@@ -27,8 +27,8 @@
 
         <Label Content="Quick Scan" FontWeight="Bold" HorizontalAlignment="Left" Width="96" Height="27" VerticalAlignment="Top" FontSize="36"/>
         <StackPanel Orientation="Horizontal" Margin="0,130,12,0" Height="40" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="119">
-            <Button x:Name="okButton" IsDefault="True" Content="Start" Width="54"/>
-            <Button x:Name="cancelButton" IsCancel="True" Content="Cancel" Width="65"/>
+            <Button x:Name="okButton" IsDefault="True" Content="Start" Click="StartScan"/>
+            <Button x:Name="cancelButton" IsCancel="True" Content="Cancel" Width="64"/>
         </StackPanel>
         <ProgressBar x:Name="Progress" HorizontalAlignment="Center" Height="39" Margin="0,32,0,0" VerticalAlignment="Top" Width="510" Value="20" Cursor=""/>
         <Label Content="Time estimation:" HorizontalAlignment="Left" Margin="324,90,0,0" VerticalAlignment="Top" Width="102"/>

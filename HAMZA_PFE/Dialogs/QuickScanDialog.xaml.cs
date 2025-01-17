@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Controls;
+using System.Threading.Tasks;
+using System.Windows;
+using System.IO;
+using System.Diagnostics;
 
 namespace HAMZA_PFE.Dialogs
 {
@@ -28,5 +32,50 @@ namespace HAMZA_PFE.Dialogs
             Progress.Value = 0;
 
         }
+
+        public async void StartScan(object sender, RoutedEventArgs e)
+        {
+            FileEnScan.Content = "Scanning: C:\\";
+            await RunScanAsync("C:\\", quickScan: false);
+            FileEnScan.Content = "\nFull Scan Completed!";
+
+            
+
+        }
+
+        private async Task RunScanAsync(string rootDirectory, bool quickScan)
+        {
+            var directories = Directory.GetDirectories(rootDirectory, "*", SearchOption.AllDirectories).ToList();
+            int totalDirs = directories.Count;
+            int progressStep = totalDirs > 0 ? 100 / totalDirs : 0;
+
+            await Task.Run(() =>
+            {
+                for (int i = 0; i < directories.Count; i++)
+                {
+                    // Simulate scanning the directory
+                    Task.Delay(50).Wait(); // Simulate time taken to scan each directory
+
+                    // Update ProgressBar
+                    Dispatcher.Invoke(() =>
+                    {
+                        Progress.Value += progressStep;
+                        FileEnScan.Content = $"Scanning: {directories[i]}";
+                    });
+
+                    if (quickScan && i >= totalDirs / 4) break; // Stop early for Quick Scan
+                }
+            });
+
+            Dispatcher.Invoke(() => Progress.Value = 100);
+        }
+
+
+       
+
+
+
+
+
     }
 }
