@@ -9,28 +9,165 @@
     Title="DashboardPage"
     d:DataContext="{d:DesignInstance local:DashboardPage,
                                      IsDesignTimeCreatable=False}"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="600"
+    d:DesignWidth="1000"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
 
-    <Grid VerticalAlignment="Top">
+    <Grid VerticalAlignment="Top" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ui:Button
+        <Border
+            Grid.Row="0"
             Grid.Column="0"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Content="Click me!"
-            Icon="Fluent24" />
-        <TextBlock
+            Margin="10"
+            Padding="20"
+            Background="{DynamicResource ControlFillColorDefaultBrush}"
+            CornerRadius="8">
+            <StackPanel>
+                <TextBlock
+                    Text="System Status"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                <TextBlock
+                    Margin="0,10,0,0"
+                    Text="Your system is secure."
+                    FontSize="14"
+                    Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                <ProgressBar
+                    Margin="0,10,0,0"
+                    Value="75"
+                    Maximum="100"
+                    Height="10"
+                    Foreground="{DynamicResource SystemAccentColorBrush}" />
+                <TextBlock
+                    Margin="0,5,0,0"
+                    Text="75% Protected"
+                    FontSize="12"
+                    Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+            </StackPanel>
+        </Border>
+
+        <Border
+            Grid.Row="0"
             Grid.Column="1"
-            Margin="12,0,0,0"
-            VerticalAlignment="Center"
-            Text="{Binding ViewModel.Counter, Mode=OneWay}" />
+            Margin="10"
+            Padding="20"
+            Background="{DynamicResource ControlFillColorDefaultBrush}"
+            CornerRadius="8">
+            <StackPanel>
+                <TextBlock
+                    Text="Quick Actions"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                <ui:Button
+                    Margin="0,10,0,0"
+                    Content="Run Full Scan"
+                    Icon="Fluent24"
+                    Command="{Binding ViewModel.RunFullScanCommand, Mode=OneWay}" />
+                <ui:Button
+                    Margin="0,10,0,0"
+                    Content="Update"
+                    Icon="Fluent24"
+                    Command="{Binding ViewModel.UpdateDatabaseCommand, Mode=OneWay}" />
+            </StackPanel>
+        </Border>
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="10"
+            Padding="20"
+            Background="{DynamicResource ControlFillColorDefaultBrush}"
+            CornerRadius="8">
+            <StackPanel>
+                <TextBlock
+                    Text="Threat Statistics"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock
+                            Text="Total Threats Detected"
+                            FontSize="14"
+                            Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock
+                            Text="14"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            Foreground="{DynamicResource SystemAccentColorBrush}" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock
+                            Text="Last Scan"
+                            FontSize="14"
+                            Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock
+                            Text="2 hours ago"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            Foreground="{DynamicResource SystemAccentColorBrush}" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock
+                            Text="Files Scanned"
+                            FontSize="14"
+                            Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock
+                            Text="15"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            Foreground="{DynamicResource SystemAccentColorBrush}" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="10"
+            Padding="20"
+            Background="{DynamicResource ControlFillColorDefaultBrush}"
+            CornerRadius="8">
+            <StackPanel>
+                <TextBlock
+                    Text="Recent Activity"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                <ListView Margin="0,10,0,0">
+                    <ListViewItem>
+                        <TextBlock Text="Threat 'Hamza' detected." />
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Virus." />
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Full system scan completed." />
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
