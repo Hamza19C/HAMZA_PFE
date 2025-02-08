@@ -18,7 +18,7 @@
     ScrollViewer.CanContentScroll="False"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid> 
         <DataGrid x:Name="HistoryDataGrid"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
@@ -52,5 +52,5 @@
                         IsReadOnly="True" />
             </DataGrid.Columns>
         </DataGrid>
-    </Grid>
+    </Grid> 
 </Page>
