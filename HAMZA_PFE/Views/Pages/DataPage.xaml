@@ -19,6 +19,38 @@
     mc:Ignorable="d">
 
     <Grid>
-       
+        <DataGrid x:Name="HistoryDataGrid"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding HistoryItems}"
+                  Margin="10">
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Date and Time" 
+                        Binding="{Binding Date}" 
+                        Width="150" 
+                        IsReadOnly="True" />
+
+                <DataGridTextColumn Header="Scan Type" 
+                        Binding="{Binding ScanType}" 
+                        Width="120" 
+                        IsReadOnly="True" />
+
+                <DataGridTextColumn Header="Detected Malware" 
+                        Binding="{Binding DetectedMalware}" 
+                        Width="200" 
+                        IsReadOnly="True" />
+
+                <DataGridTextColumn Header="Action Taken" 
+                        Binding="{Binding ActionTaken}" 
+                        Width="150" 
+                        IsReadOnly="True" />
+                
+                <DataGridTextColumn Header="Status" 
+                        Binding="{Binding Status}" 
+                        Width="100" 
+                        IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
