@@ -76,12 +76,12 @@
                     Margin="0,10,0,0"
                     Content="Run Full Scan"
                     Icon="Fluent24"
-                    Command="{Binding ViewModel.RunFullScanCommand, Mode=OneWay}" />
+                     />
                 <ui:Button
                     Margin="0,10,0,0"
                     Content="Update"
                     Icon="Fluent24"
-                    Command="{Binding ViewModel.UpdateDatabaseCommand, Mode=OneWay}" />
+                    />
             </StackPanel>
         </Border>
 
