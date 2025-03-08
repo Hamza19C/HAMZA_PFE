@@ -1,30 +1,25 @@
-﻿
-using HAMZA_PFE.ViewModels.Pages;
+﻿using HAMZA_PFE.ViewModels.Pages;
 using Wpf.Ui.Controls;
-using HAMZA_PFE.Dialogs;
+using System.Windows;
 
 namespace HAMZA_PFE.Views.Pages
 {
-    
     public partial class Protection : INavigableView<ProtectionViewModel>
     {
-
         public ProtectionViewModel ViewModel { get; }
 
         public Protection(ProtectionViewModel viewModel)
         {
             ViewModel = viewModel;
-            DataContext = this;
+            DataContext = ViewModel;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            QuickScanDialog quickScanDialog = new QuickScanDialog();
-            quickScanDialog.ShowDialog();
-
-
-
+            ViewModel.OnQuickScan(); // Opens the scan dialog
         }
     }
 }
+
+

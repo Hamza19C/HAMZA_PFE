@@ -1,39 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using HAMZA_PFE.Dialogs;
+using System.IO;
 
 namespace HAMZA_PFE.ViewModels.Pages
 {
     public partial class ProtectionViewModel : ObservableObject
     {
-        [ObservableProperty]
-        private bool _isProtected = true;
-
-        [ObservableProperty]
-        private bool _isProtectedByIa = true;
-
-        [ObservableProperty]
-        private bool _isRealTimeOn = true;
-
         [RelayCommand]
-        private void OnProtectionToggle()
+        public void OnQuickScan()
         {
-            IsProtected = !IsProtected;
-        }
+            // Provide the correct path to your dataset (full.csv)
+            string datasetPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dataset", "full.csv");
 
-        [RelayCommand]
-        private void OnProtectionByIaToggle()
-        {
-            IsProtectedByIa = !IsProtectedByIa;
-        }
+            // Log the dataset path to the console for debugging
+            Console.WriteLine($"Dataset Path: {datasetPath}");
 
-        [RelayCommand]
-        private void OnRealTimeToggle()
-        {
-            IsRealTimeOn = !IsRealTimeOn;
-        }
+            // Check if the dataset file exists
+            if (!File.Exists(datasetPath))   
+            {
+                System.Windows.MessageBox.Show("Dataset file (full.csv) not found! Please ensure the file is in the correct directory.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                return;
+            }
 
+            // Open the scan dialog and pass the dataset path
+            QuickScanDialog scanDialog = new QuickScanDialog(datasetPath);
+            scanDialog.ShowDialog(); // Show the dialog
+        }
     }
 }
