@@ -128,7 +128,7 @@ namespace HAMZA_PFE.Dialogs
                             if (_malwareHashes.Contains(fileHash))
                             {
                                 malwareDetected = true;
-                                break; // Stop scanning if malware is detected
+                                break; // Stop scanning if malware is detected // Mo7a : The Quick Scan should scan the other files when a hash match in the dataset , but in this case when there is a match the scan stops , Break should be removed for continue the scaning .... 
                             }
                         }
                         catch (UnauthorizedAccessException) { } // Ignore inaccessible files
