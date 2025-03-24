@@ -2,13 +2,14 @@
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
+using System;  // Ensure this is present
+using System.Windows;  // Explicit reference to System.Windows.Application
 
 namespace HAMZA_PFE.Views.Windows
 {
     public partial class MainWindow : INavigationWindow
     {
         public MainWindowViewModel ViewModel { get; }
-
 
         public MainWindow(
             MainWindowViewModel viewModel,
@@ -48,8 +49,8 @@ namespace HAMZA_PFE.Views.Windows
         {
             base.OnClosed(e);
 
-            // Make sure that closing this window will begin the process of closing the application.
-            Application.Current.Shutdown();
+            // Ensure correct Application reference
+            System.Windows.Application.Current.Shutdown();
         }
 
         INavigationView INavigationWindow.GetNavigation()
@@ -63,3 +64,4 @@ namespace HAMZA_PFE.Views.Windows
         }
     }
 }
+

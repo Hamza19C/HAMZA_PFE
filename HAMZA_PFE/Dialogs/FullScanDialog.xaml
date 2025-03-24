@@ -5,13 +5,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:HAMZA_PFE.Dialogs"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    x:Class="HAMZA_PFE.Dialogs.QuickScanDialog"
+    x:Class="HAMZA_PFE.Dialogs.FullScanDialog"
     mc:Ignorable="d"
-    Title="Quick Scan"
+    Title="Full Scan"
     WindowStyle="None"
     WindowStartupLocation="CenterScreen"
-    Height="400" 
-    Width="550"
+    Height="450" 
+    Width="800"
     ResizeMode="NoResize"
     ShowInTaskbar="False"
     HorizontalAlignment="Center"
@@ -46,18 +46,22 @@
         <!-- Progress Bar -->
         <ProgressBar x:Name="Progress" Grid.Row="2" Height="20" Width="500" Margin="10"/>
 
+        <!-- Time Estimation -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10">
             <Label Content="Estimated Time:" FontWeight="Bold"/>
             <Label x:Name="TimeEstimation" Content="Calculating..." Foreground="DarkGreen"/>
         </StackPanel>
 
+        <!-- Malware Detection Result -->
         <Border Grid.Row="4" Padding="10" Background="LightGray" CornerRadius="5" Margin="10">
             <TextBlock x:Name="MalwareResult" Text="Scan result will appear here..." 
-                       FontSize="14" FontWeight="Bold" Foreground="Black" TextAlignment="Center"/>
+                   FontSize="14" FontWeight="Bold" Foreground="Black" TextAlignment="Center"/>
         </Border>
-        
+
+        <!-- Scan Result Label -->
         <Label x:Name="ScanResultLabel" Grid.Row="5" Content="" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"/>
 
+        <!-- Buttons -->
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
             <Button x:Name="okButton" Content="Start" Width="75" Click="StartScan"/>
             <Button x:Name="cancelButton" Content="Cancel" Width="75" Click="CloseDialog" Margin="5,0,0,0"/>

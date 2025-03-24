@@ -43,7 +43,7 @@ namespace HAMZA_PFE.Services
         /// </summary>
         private async Task HandleActivationAsync()
         {
-            if (!Application.Current.Windows.OfType<MainWindow>().Any())
+            if (!System.Windows.Application.Current.Windows.OfType<MainWindow>().Any())
             {
                 _navigationWindow = (
                     _serviceProvider.GetService(typeof(INavigationWindow)) as INavigationWindow

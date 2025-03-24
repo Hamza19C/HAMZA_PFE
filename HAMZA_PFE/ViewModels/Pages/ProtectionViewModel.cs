@@ -11,22 +11,55 @@ namespace HAMZA_PFE.ViewModels.Pages
         [RelayCommand]
         public void OnQuickScan()
         {
-            // Provide the correct path to your dataset (full.csv)
-            string datasetPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dataset", "full.csv");
+            string path1 = Path.GetDirectoryName(@"C:\Users\IdeaPad S340\Desktop\HAMZA_PFE\HAMZA_PFE\");
+            System.Diagnostics.Debug.WriteLine($"Start quick scan");
 
-            // Log the dataset path to the console for debugging
-            Console.WriteLine($"Dataset Path: {datasetPath}");
+            string datasetPath = Path.Combine(path1, "dataset", "full.csv");
+            System.Diagnostics.Debug.WriteLine($"Dataset Path: {datasetPath}");
 
-            // Check if the dataset file exists
-            if (!File.Exists(datasetPath))   
+            if (!File.Exists(datasetPath))
             {
-                System.Windows.MessageBox.Show("Dataset file (full.csv) not found! Please ensure the file is in the correct directory.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                System.Windows.MessageBox.Show($"Dataset file (full.csv) not found at: {datasetPath}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
                 return;
             }
 
-            // Open the scan dialog and pass the dataset path
             QuickScanDialog scanDialog = new QuickScanDialog(datasetPath);
-            scanDialog.ShowDialog(); // Show the dialog
+            scanDialog.ShowDialog();
         }
+
+        [RelayCommand]
+        public void OnFullScan()
+        {
+            string path1 = Path.GetDirectoryName(@"C:\Users\IdeaPad S340\Desktop\HAMZA_PFE\HAMZA_PFE\");
+            string datasetPath = Path.Combine(path1, "dataset", "full.csv");
+            System.Diagnostics.Debug.WriteLine($"Dataset Path: {datasetPath}");
+
+            if (!File.Exists(datasetPath))
+            {
+                System.Windows.MessageBox.Show($"Dataset file (full.csv) not found at: {datasetPath}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                return;
+            }
+
+            FullScanDialog scanDialog = new FullScanDialog(datasetPath);
+            scanDialog.ShowDialog();
+        }
+
+        public void OnSelectiveScan()
+        {
+            string path1 = Path.GetDirectoryName(@"C:\Users\IdeaPad S340\Desktop\HAMZA_PFE\HAMZA_PFE\");
+            string datasetPath = Path.Combine(path1, "dataset", "full.csv");
+            System.Diagnostics.Debug.WriteLine($"Dataset Path: {datasetPath}");
+
+            if (!File.Exists(datasetPath))
+            {
+                System.Windows.MessageBox.Show($"Dataset file (full.csv) not found at: {datasetPath}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                return;
+            }
+
+            SelectiveScanDialog scanDialog = new SelectiveScanDialog(datasetPath);
+            scanDialog.ShowDialog();
+        }
+
     }
 }
+

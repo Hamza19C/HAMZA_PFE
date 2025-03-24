@@ -12,21 +12,21 @@
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="323" Width="780">
         <ui:Card HorizontalAlignment="Left" Margin="50,50,0,0" Height="114" Width="201" VerticalAlignment="Top">
             <StackPanel Width="176" Height="82">
-                <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click"/>
+                <Button Content="Quick Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Click="Quick_Scan"/>
                 <TextBlock Text="Quick scan for your device." TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
             </StackPanel>
         </ui:Card>
 
         <ui:Card HorizontalAlignment="Left" Margin="284,50,0,0"  Height="114" Width="201" VerticalAlignment="Top">
             <StackPanel Width="176" Height="84">
-                <Button Content="Full Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Button Content="Full Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Click="Full_Scan"/>
                 <TextBlock Text="Scan your full device." TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
             </StackPanel>
         </ui:Card>
 
         <ui:Card HorizontalAlignment="Left" Margin="521,50,0,0"  Height="114" Width="201" VerticalAlignment="Top">
-            <StackPanel Height="84" Width="172">
-                <Button Content="Selective Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <StackPanel Height="84" Width="172"> 
+                <Button Content="Selective Scan" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Click="Selective_Scan"/>
                 <TextBlock Text="Select a specific file or folder to scan." TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0" Height="46"/>
             </StackPanel>
         </ui:Card>

@@ -14,12 +14,12 @@ using Wpf.Ui.Controls;
 
 namespace HAMZA_PFE.Dialogs
 {
-    public partial class QuickScanDialog : FluentWindow
+    public partial class FullScanDialog : FluentWindow
     {
         private HashSet<string> _malwareHashes;
         private CancellationTokenSource _cancellationTokenSource;
 
-        public QuickScanDialog(string datasetPath)
+        public FullScanDialog(string datasetPath)
         {
             InitializeComponent();
             FileEnScan.Content = "Waiting...";
@@ -76,7 +76,7 @@ namespace HAMZA_PFE.Dialogs
 
             try
             {
-                string scanDirectory = "C:\\Users\\IdeaPad S340\\Desktop\\";
+                string scanDirectory = "C:\\Users\\IdeaPad S340\\Desktop\\3L\\GE";
                 bool malwareDetected = await RunScanAsync(scanDirectory, _cancellationTokenSource.Token);
 
                 ScanResultLabel.Content = malwareDetected ? "🚨 Malware Detected!" : "✅ No Malware Found!";
@@ -212,8 +212,3 @@ namespace HAMZA_PFE.Dialogs
         }
     }
 }
-
-
-
-
-

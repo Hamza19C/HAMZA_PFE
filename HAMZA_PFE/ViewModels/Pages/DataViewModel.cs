@@ -25,19 +25,20 @@ namespace HAMZA_PFE.ViewModels.Pages
             var colorCollection = new List<DataColor>();
 
             for (int i = 0; i < 8192; i++)
-                colorCollection.Add(
-                    new DataColor
-                    {
-                        Color = new SolidColorBrush(
-                            Color.FromArgb(
-                                (byte)200,
-                                (byte)random.Next(0, 250),
-                                (byte)random.Next(0, 250),
-                                (byte)random.Next(0, 250)
-                            )
+            {
+                colorCollection.Add(new DataColor
+                {
+                    Color = new SolidColorBrush(
+                        System.Windows.Media.Color.FromArgb(  
+                            200,  
+                            (byte)random.Next(0, 256),  
+                            (byte)random.Next(0, 256),
+                            (byte)random.Next(0, 256)
                         )
-                    }
-                );
+                    )
+                });
+            }
+
 
             Colors = colorCollection;
 

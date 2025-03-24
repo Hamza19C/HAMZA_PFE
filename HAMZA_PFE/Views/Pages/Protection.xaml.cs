@@ -15,10 +15,24 @@ namespace HAMZA_PFE.Views.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Quick_Scan(object sender, RoutedEventArgs e)
         {
-            ViewModel.OnQuickScan(); // Opens the scan dialog
+            ViewModel.OnQuickScan(); 
         }
+
+        private void Full_Scan(object sender, RoutedEventArgs e)
+        {
+            ViewModel.OnFullScan();
+        }
+
+        private void Selective_Scan(Object sender, RoutedEventArgs e)
+        {
+            ViewModel.OnSelectiveScan();
+        }
+
+
+
+
     }
 }
 
