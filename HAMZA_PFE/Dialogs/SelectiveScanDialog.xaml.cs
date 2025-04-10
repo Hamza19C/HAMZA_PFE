@@ -185,7 +185,7 @@ namespace HAMZA_PFE.Dialogs
                             if (_malwareHashes.Contains(fileHash))
                             {
                                 Debug.WriteLine($"Malware detected in: {filePath}");
-                                malwareDetected = true;
+                                malwareDetected = true; //Mo7a : Remove this line to complete the scan ... if there is a match in hash ... The scan will stop ... this will be like the quick scan 
                                 break;
                             }
                         }
